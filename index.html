@@ -1,0 +1,99 @@
+<html>
+<head>
+	<title>  Sort My App by Kamal Sir </title>
+	<style>
+				* { font-size:40px; font-family:Arial;}
+				body {background-color: lightblue;}
+	</style>
+</head>
+
+<body>
+<center>
+			<h1> Sort My Name App </h1>
+			<form onsubmit="mysort()">
+			<input type="text" placeholder="enter your name " id ="name" />
+			<br/><br/>
+			<input type="submit"/>
+			<br/><br/>
+			<h2 id="msg"/>
+			</form>
+			
+			<script>
+					function mysort()
+					{
+							event.preventDefault();
+							let name = document.getElementById("name");
+							let msg = document.getElementById("msg");
+
+
+							if(name.value.trim() == "")
+							{
+									alert("name cannot be empty");
+									msg.innerHTML="";
+									name.focus();
+									return;
+							}
+						
+							let n = name.value;
+		
+							//logic 1
+							let d1=n.split("");
+							d1.sort()
+							let nn = d1.join("");
+
+							//logic 2
+							
+							let nnn = n.split("").sort().join("");
+							
+							msg.innerHTML = "sorted name "+ nn + " " + nnn;
+					}
+			</script>
+</center>
+</body>
+</html>
+				
+							
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
